@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>MyAcademy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- contace details -->
+    <section id="signup">
+        <div class="reminder">
+            <h1>Enter your email and password</h1>
+        </div>
+
+        <div>
+            <form id="accountform" onsubmit="return (checkaccountform())" name="Form">
+            <h3>Login to your account</h3>
+            <input type="text" placeholder="Email Address" name="email" id="email">
+            <input type="text" placeholder="password" name="password" id="password">
+            <div class="btn">
+                 <button class="palepeach" class="button" type="submit">Submit</button> 
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function checkaccountform(){
+       
+   
+        var regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+        if( document.Form.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } else if(!document.Form.email.value.match(regex)){
+         
+            alert( "Please provide your Corret Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } 
+        
+        
+        if( document.Form.password.value == "" ) {
+            alert( "Please provide your password" );
+            document.Form.password.focus() ;
+            return false;
+            } else {
+                        alert("You are Successfully Login" );
+                        return true;
+                      }
+    
+    }
+    
+</script>
+</html>

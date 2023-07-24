@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>MyAcademy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/WebsiteLogo.png" alt="WebsiteLogo">
+        <div class="navigation">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Improve your future with MyAcademy</h2>
+        
+        <p> Education helps us get exposure to new ideas and concepts that we can use 
+            to appreciate <br>and improve the world around us and the world within us. 
+            I wish all of us could find the <br>meaning of life throughout education.</p>            
+    </section>
+
+    <!-- Resources provided-->
+    <section id="resources">
+        <h1>Resources Available</h1>
+        <p>Living a better life with self awareness and self discipline</p>
+        <div class="ra-base">
+            <div class="ra-box">
+                <h3>Online Resources Recommendations</h3>
+                <p>Great open course websites are recommended in the <a href="#bottom">footer section</a>
+                    . Check it out, and engaging studies in the domain you love.</p>
+            </div>
+            <div class="ra-box">
+                <h3>Roadmap to Improve</h3>
+                <p>Rigor as well as reasonable prepared roadmap to enhance your future</p>
+            </div>
+
+            <div class="ra-box">
+                <h3>Blogs</h3>
+                <p>Blogs about raising awareness and education. They provides 
+                    a relatively simple and clear path </p>
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="best-courses">
+        <h1>Best courses</h1>
+        <p>Living a better life with self awareness and self discipline</p> 
+        <div class="course-box">
+            <div class="courses">
+                <a href="https://www.edx.org/cs50"">
+                    <iframe width="917" height="516" src="https://www.youtube.com/embed/GO3A8vcNZbk" 
+                    title="Intro - CS50 2020" frameborder="0" allow="accelerometer; autoplay; 
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </a>
+                <div class="details">
+                    <a href="https://www.edx.org/cs50" target="_blank">Enroll the Course</a>
+                </div>
+            </div>
+
+            <div class="courses">
+                <!-- <img src="images/CS50image.webp" alt="Harvard CS50"> -->
+                <iframe width="917" height="516"
+                src="https://www.youtube.com/embed/nykOeWgQcHM?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA" 
+                title="1. What is Computation?" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <div class="details">
+                    <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank">Enroll the Course</a>
+                </div>
+            </div>
+
+            <div class="courses">
+                <!-- <img src="images/CS50image.webp" alt="Harvard CS50"> -->
+                    
+                <iframe width="917" height="516" src="https://www.youtube.com/embed/Kshso4MZEYU" 
+                title="Introduction to Mathematical Thinking - Stanford University, Dr Keith J. Devlin" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="details">
+                    <a href="https://www.coursera.org/learn/mathematical-thinking" target="_blank">Enroll the Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sign up -->
+    <section id="signup">
+        <div class="reminder">
+            <p>Get all the resources to improve your future for free!</p>
+            <h1>Register to be better!</h1>
+        </div>
+
+        <div>
+            <form id="accountform" onsubmit="return (checkaccountform())" name="Form">
+            <h3>Create a account now!</h3>
+            <input type="text" placeholder="Name" name="name" id="name">
+            <input type="text" placeholder="Email Address" name="email" id="email">
+            <input type="text" placeholder="password" name="password" id="password">
+            <div class="btn">
+              <!--<a class="palepeach" onclick="dd"type="submit" value="Submit">Submit Form</a> 
+       
+                 <button class="palepeach" type="button" onclick="alert('Thank you for your response! Your result will be sent to your email.')">Submit</button> --> 
+                 <button class="palepeach" class="button" type="submit">Submit</button> 
+            </div>
+            <div class="login">
+                <a href="login.html" target="_blank">Already have an account?</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="bottom">
+        <div>
+            <h3>Education Websites Recommendations</h3>
+            <p>All the resources recommended in this website are from below websites</p>
+            <ul>
+                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
+                <li><a href="https://www.edx.org/" target="_blank">Edx</a></li>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li><a href="https://ocw.mit.edu/" target="_blank">Mit Ocw</a></li>
+                <li><a href="https://artofproblemsolving.com/" target="_blank">The Art Of Problem Solving</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+<!--
+<script>
+    function checkaccountform(){
+        if( document.Form.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.Form.name.focus() ;
+            return false;
+        }
+        if( document.Form.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.Form.email.focus() ;
+            return false;
+        }
+        if( document.Form.phonenumber.value == "" ) {
+            alert( "Please provide your Phone Number!" );
+            document.Form.phonenumber.focus() ;
+            return false;
+            } else if( isNaN( document.Form.phonenumber.value )){
+                    alert( "Please provide only numerals into the phone number section" );
+                    document.Form.phonenumber.focus() ;
+                    return false;
+               } else {
+                        alert("ok");
+                        return true;
+                      }
+
+     
+    
+    }
+    
+</script>
+-->
+
+<!--
+<script>
+    function checkaccountform(){
+        var name =  document.Form.name.value
+        
+        if( document.Form.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.Form.name.focus() ;
+            return false;
+        }
+
+        var regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+        if( document.Form.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } else if(!document.Form.email.value.match(regex)){
+         
+            alert( "Please provide your Corret Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } 
+        
+        
+        if( document.Form.phonenumber.value == "" ) {
+            alert( "Please provide your Phone Number!" );
+            document.Form.phonenumber.focus() ;
+            return false;
+            } else if( isNaN( document.Form.phonenumber.value )){
+                    alert( "Please provide a phone number in the number" );
+                    document.Form.phonenumber.focus() ;
+                    return false;
+               } else {
+                        alert("You are Successfully Sign in" + " Welcome " + name + " nice to meet you!!!! ");
+                        return true;
+                      }
+    
+    }
+    
+</script>
+-->
+
+<script>
+    function checkaccountform(){
+        var name =  document.Form.name.value
+        
+        if( document.Form.name.value == "" ) {
+            alert( "Please enter your name!" );
+            document.Form.name.focus() ;
+            return false;
+        }
+
+        var regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+        if( document.Form.email.value == "" ) {
+            alert( "Please enter your Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } else if(!document.Form.email.value.match(regex)){
+         
+            alert( "Please enter the Correct Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } 
+        
+        
+        if( document.Form.password.value == "" ) {
+            alert( "Please enter your password" );
+            document.Form.password.focus() ;
+            return false;
+            } else {
+                        alert("You are Successfully Sign up" + ", " + name + ", welcome to the website!!!");
+                        return true;
+                      }
+    
+    }
+    
+</script>
+
+</html>

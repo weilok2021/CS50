@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>MyAcademy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/WebsiteLogo.png" alt="WebsiteLogo">
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="contact-home">
+        <h2>Contact</h2>
+    </section>
+
+    <hr class="contact-hr">
+
+    <!-- contace details -->
+    <section id="signup">
+        <div class="reminder">
+            <h1>Leave your contact details in the form</h1>
+            <p>You'll be getting contact within few hours after you filled in the form.</p>
+        </div>
+
+        <div>
+            <form id="accountform" onsubmit="return (checkaccountform())" name="Form">
+            <h3>Leave your contact details below!</h3>
+            <input type="text" placeholder="Name" name="name" id="name">
+            <input type="text" placeholder="Email Address" name="email" id="email">
+            <input type="text" placeholder="Phone Number" name="phonenumber" id="phonenumber">
+            <div class="btn">
+              <!--<a class="palepeach" onclick="dd"type="submit" value="Submit">Submit Form</a> 
+       
+                 <button class="palepeach" type="button" onclick="alert('Thank you for your response! Your result will be sent to your email.')">Submit</button> --> 
+                 <button class="palepeach" class="button" type="submit">Submit</button> 
+            </div>
+        </div>
+    </section>
+
+    <footer id="bottom">
+        <div>
+            <h3>Education Websites Recommendations</h3>
+            <p>All the resources recommended in this website are from below websites</p>
+            <ul>
+                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
+                <li><a href="https://www.edx.org/" target="_blank">Edx</a></li>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li><a href="https://ocw.mit.edu/" target="_blank">Mit Ocw</a></li>
+                <li><a href="https://artofproblemsolving.com/" target="_blank">The Art Of Problem Solving</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    function checkaccountform(){
+        var name =  document.Form.name.value
+        
+        if( document.Form.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.Form.name.focus() ;
+            return false;
+        }
+
+        var regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+        if( document.Form.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } else if(!document.Form.email.value.match(regex)){
+         
+            alert( "Please provide your Corret Email!" );
+            document.Form.email.focus() ;
+            return false;
+        } 
+        
+        
+        if( document.Form.phonenumber.value == "" ) {
+            alert( "Please provide your Phone Number!" );
+            document.Form.phonenumber.focus() ;
+            return false;
+            } else if( isNaN( document.Form.phonenumber.value )){
+                    alert( "Please provide a phone number in the number" );
+                    document.Form.phonenumber.focus() ;
+                    return false;
+               } else {
+                        alert("Your details are successfully entered, " + "you'll receive contact within few hours.");
+                        return true;
+                      }
+    
+    }
+    
+</script>
+    
+</html>
